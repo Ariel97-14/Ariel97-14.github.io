@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="description" content="GymPlanner: sistema de reservas de clases con cupos, cancelar turno y persistencia local. UI oscura tipo app de gimnasio.">
+  <meta name="author" content="Ariel Cortés">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GymPlanner · Reservá tu clase</title>
+  <link rel="stylesheet" href="gymplanner.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__content">
+      <div class="brand">
+        <span class="logo">🏋️</span>
+        <h1 class="brand__title">GymPlanner</h1>
+      </div>
+
+      <nav class="userbar">
+        <a class="link-nav" href="index.html">Portfolio</a>
+        <a class="link-nav" href="electroshop.html">ElectroShop</a>
+        <a class="link-nav" href="burgerexpress.html">BurgerExpress</a>
+        <a class="link-nav" href="dashboard.html">Dashboard</a>
+        <span class="chip chip--open">Cupos activos</span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container layout">
+    <section class="panel">
+      <header class="panel__header">
+        <h2>Clases de la semana</h2>
+        <p class="muted">Elegí tu horario y reservá lugar. Cada clase tiene cupos limitados.</p>
+      </header>
+
+      <table class="schedule">
+        <caption class="sr-only">Agenda semanal de clases y cupos disponibles</caption>
+        <thead>
+          <tr>
+            <th scope="col">Día</th>
+            <th scope="col">Clase</th>
+            <th scope="col">Hora</th>
+            <th scope="col">Cupos</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="scheduleBody">
+          <!-- filas dinámicas desde app.js -->
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="panel aside">
+      <header class="panel__header">
+        <h2>Mis Reservas</h2>
+        <p class="muted">Podés cancelar si no vas a ir 💪</p>
+      </header>
+
+      <div id="myBookings" class="bookings empty">
+        <p class="muted center">Todavía no tenés reservas 😴</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <p>© <span id="year"></span> GymPlanner · Proyecto didáctico</p>
+      <p class="muted">Reservas con cupo, guardadas en tu navegador.</p>
+    </div>
+  </footer>
+
+  <script src="gymplanner.js" type="module"></script>
+</body>
+</html>

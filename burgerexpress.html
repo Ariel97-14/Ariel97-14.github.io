@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BurgerExpress · Pedido Online</title>
+
+  <meta name="description" content="BurgerExpress: app tipo delivery para armar pedidos de comida rápida. Sumar/restar combos, total en vivo, validación de datos de entrega y método de pago. HTML, CSS y JavaScript.">
+  <meta name="author" content="Ariel Cortés">
+
+  <link rel="stylesheet" href="burgerexpress.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container topbar__content">
+      <div class="brand">
+        <span class="logo">🍔</span>
+        <h1 class="brand__title">BurgerExpress</h1>
+      </div>
+
+      <nav class="userbar">
+        <a class="link-port" href="index.html">Portfolio</a>
+        <a class="link-port" href="electroshop.html">ElectroShop</a>
+        <a class="link-port" href="gymplanner.html">GymPlanner</a>
+        <a class="link-port" href="dashboard.html">Dashboard</a>
+        <span class="chip chip--open">Abierto ahora</span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container layout">
+    <!-- PANEL DERECHO PRIMERO EN MOBILE -->
+    <aside class="order-panel">
+      <header class="panel-head">
+        <h2>Tu pedido</h2>
+        <p class="muted">Revisá el total y completá tus datos</p>
+      </header>
+
+      <div id="orderItems" class="order-items empty">
+        <p class="muted center">Todavía no agregaste nada 🍟</p>
+      </div>
+
+      <div class="order-total">
+        <span>Total:</span>
+        <strong id="orderTotal">$0</strong>
+      </div>
+
+      <form id="checkoutForm" class="checkout-form" novalidate>
+        <div class="field">
+          <label>Nombre y apellido</label>
+          <input id="nombre" type="text" placeholder="Ej: Ariel Gómez" required />
+          <small class="err" data-err-for="nombre"></small>
+        </div>
+
+        <div class="field">
+          <label>Dirección de entrega</label>
+          <input id="direccion" type="text" placeholder="Calle 123, Piso 2" required />
+          <small class="err" data-err-for="direccion"></small>
+        </div>
+
+        <div class="field">
+          <label>Método de pago</label>
+          <select id="pago" required>
+            <option value="">Elegir...</option>
+            <option value="efectivo">Efectivo</option>
+            <option value="tarjeta">Tarjeta al recibir</option>
+            <option value="mp">Mercado Pago</option>
+          </select>
+          <small class="err" data-err-for="pago"></small>
+        </div>
+
+        <button id="btnConfirm" class="btn btn--accent btn-big" type="submit">
+          Hacer pedido ✅
+        </button>
+
+        <p class="note-legal">
+          * Este sitio es una demo didáctica. No enviamos comida real (todavía 😏).
+        </p>
+      </form>
+    </aside>
+
+    <!-- MENÚ -->
+    <section class="menu-panel">
+      <header class="panel-head">
+        <h2>Menú</h2>
+        <p class="muted">Elegí tus combos favoritos 👇</p>
+      </header>
+
+      <ul id="productList" class="cards-grid">
+        <!-- se llena desde JS -->
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <p>© <span id="year"></span> BurgerExpress · Proyecto didáctico</p>
+      <p class="muted">Frontend JS · Form validation · Local state</p>
+    </div>
+  </footer>
+
+  <script src="burgerexpress.js" type="module"></script>
+</body>
+</html>

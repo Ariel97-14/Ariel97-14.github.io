@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ariel Cortés · Portfolio Frontend</title>
+
+  <meta name="description" content="Portfolio Frontend de Ariel Cortés: e-commerce, pedidos online, reservas de turnos y dashboard administrativo. HTML, CSS, JavaScript vanilla, responsive y dark mode.">
+  <meta name="author" content="Ariel Cortés">
+  <meta name="keywords" content="frontend, javascript, html, css, portfolio, ecommerce, dashboard, reservas">
+
+  <link rel="stylesheet" href="style.portfolio.css" />
+</head>
+<body>
+
+<header class="top">
+  <h1 class="title">Ariel Cortés — Desarrollador Web Frontend</h1>
+  <p class="intro">
+    Desarrollo interfaces modernas con HTML, CSS y JavaScript (vanilla).
+    Trabajo diseño responsive, dark mode, manejo de estado en el cliente
+    (carrito, reservas, stock), validación de formularios y dashboards con
+    métricas.
+  </p>
+  <p class="intro">
+    En este portfolio muestro 4 mini-apps funcionales que cubren e-commerce,
+    pedidos online, reservas de turnos y panel administrativo.
+  </p>
+
+  <div class="contact">
+    <p>📍 San Rafael, Mendoza</p>
+    <p>📧 cortesariel747@gmail.com</p>
+    <p>📱 +54 9 261 711 1724</p>
+  </div>
+</header>
+
+<section class="projects">
+
+  <article class="proj-card">
+    <div class="proj-head">
+      <span>ElectroShop ⚡</span>
+      <span class="proj-type">E-commerce</span>
+    </div>
+    <p class="proj-desc">
+      Tienda de electrónica con modo oscuro. Login simulado con roles
+      (<strong>cliente</strong> vs <strong>manager</strong>), control de stock en vivo,
+      carrito persistente con <code>localStorage</code> y animaciones de UI.
+    </p>
+    <div class="proj-actions">
+      <a class="btn" href="electroshop.html" target="_blank" rel="noopener">Ver demo</a>
+    </div>
+  </article>
+
+  <article class="proj-card">
+    <div class="proj-head">
+      <span>BurgerExpress 🍔</span>
+      <span class="proj-type">Pedido online</span>
+    </div>
+    <p class="proj-desc">
+      App tipo delivery: agregás combos, modificás cantidades,
+      cálculo de total en vivo y validación de datos de entrega/pago con
+      feedback visual.
+    </p>
+    <div class="proj-actions">
+      <a class="btn" href="burgerexpress.html" target="_blank" rel="noopener">Ver demo</a>
+    </div>
+  </article>
+
+  <article class="proj-card">
+    <div class="proj-head">
+      <span>GymPlanner 🏋️</span>
+      <span class="proj-type">Turnos / Reservas</span>
+    </div>
+    <p class="proj-desc">
+      Sistema de reservas de clases con cupos limitados. El usuario puede
+      reservar y cancelar, y el cupo se actualiza al instante. Persistencia en
+      <code>localStorage</code>. Pensado como gestión de turnos para gimnasio.
+    </p>
+    <div class="proj-actions">
+      <a class="btn" href="gymplanner.html" target="_blank" rel="noopener">Ver demo</a>
+    </div>
+  </article>
+
+  <article class="proj-card">
+    <div class="proj-head">
+      <span>Admin Dashboard 📊</span>
+      <span class="proj-type">Panel interno</span>
+    </div>
+    <p class="proj-desc">
+      Dashboard en dark mode con tarjetas de métricas, gráfico de ventas
+      (Chart.js) y tabla de usuarios filtrable por rol y búsqueda en vivo.
+      Estilo app interna tipo SaaS.
+    </p>
+    <div class="proj-actions">
+      <a class="btn" href="dashboard.html" target="_blank" rel="noopener">Ver demo</a>
+    </div>
+  </article>
+
+</section>
+
+<footer class="foot">
+  <p>Este portfolio es 100% HTML, CSS y JavaScript Vanilla (sin frameworks).</p>
+  <p>© <span id="year"></span> Ariel Cortés</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

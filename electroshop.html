@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ElectroShop · Tienda electrónica</title>
+
+  <meta name="description" content="ElectroShop: tienda de electrónica en dark mode con login simulado, control de stock por rol (cliente / manager), carrito persistente y catálogo con fichas técnicas. HTML, CSS y JavaScript.">
+  <meta name="author" content="Ariel Cortés">
+
+  <link rel="stylesheet" href="electroshop.css" />
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header class="topbar">
+    <div class="container topbar__content">
+      <div class="brand">
+        <span class="logo">⚡</span>
+        <h1 class="brand__title">ElectroShop</h1>
+      </div>
+
+      <nav class="userbar">
+        <a class="link-nav" href="index.html">Portfolio</a>
+        <a class="link-nav" href="burgerexpress.html">BurgerExpress</a>
+        <a class="link-nav" href="gymplanner.html">GymPlanner</a>
+        <a class="link-nav" href="dashboard.html">Dashboard</a>
+
+        <span id="sessionStatus" class="session-chip">Invitado 👀</span>
+
+        <button id="openLogin" class="btn-slim">Ingresar</button>
+        <button id="logoutBtn" class="btn-slim hidden">Salir</button>
+
+        <button id="openCart" class="cart-btn" aria-label="Ver carrito">
+          🛒 <span id="cartCount">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / SEARCH -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <h2 class="hero__title">Tecnología al mejor precio</h2>
+        <p class="hero__text">
+          Iniciá sesión como cliente y comprá. Iniciá sesión como manager y
+          administrá stock por producto en vivo.
+        </p>
+        <div class="hero__login-hint">
+          <p><strong>Cliente demo:</strong> cliente@electro.shop / 123456</p>
+          <p><strong>Manager demo:</strong> manager@electro.shop / admin123</p>
+        </div>
+      </div>
+
+      <div class="hero__search">
+        <input id="searchInput" class="search" placeholder="Buscar... Ej: TV, celular, cafetera" />
+        <button id="ctaLogin" class="btn-main">Iniciar sesión</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO -->
+  <section id="catalogo" class="container">
+    <main class="main-panel">
+      <!-- Categorías -->
+      <div class="tabs" role="tablist" aria-label="Categorías">
+        <button class="tab active" role="tab" aria-selected="true" data-cat="televisores">Televisores</button>
+        <button class="tab" role="tab" aria-selected="false" data-cat="celulares">Celulares</button>
+        <button class="tab" role="tab" aria-selected="false" data-cat="tablets">Tablets</button>
+        <button class="tab" role="tab" aria-selected="false" data-cat="audio">Audio</button>
+        <button class="tab" role="tab" aria-selected="false" data-cat="cocina">Cocina</button>
+      </div>
+
+      <!-- Carrusel -->
+      <div id="carousel" class="carousel" aria-roledescription="carrusel">
+        <button class="carousel__nav prev" aria-label="Anterior">‹</button>
+        <ul id="carouselTrack" class="carousel__track"></ul>
+        <button class="carousel__nav next" aria-label="Siguiente">›</button>
+      </div>
+    </main>
+  </section>
+
+  <!-- CARRITO LATERAL -->
+  <aside id="cartDrawer" class="drawer">
+    <header class="drawer__header">
+      <h2>Tu carrito</h2>
+      <button id="closeCart" class="close-cart" aria-label="Cerrar carrito">✕</button>
+    </header>
+
+    <div class="drawer__content">
+      <p class="muted center">No hay productos en el carrito.</p>
+    </div>
+
+    <div class="drawer__footer">
+      <div class="cart-summary__row">
+        <span>Total:</span>
+        <strong id="cartTotal">$0</strong>
+      </div>
+      <button id="checkoutBtn" class="btn-main btn-full" disabled>Finalizar compra ✅</button>
+      <small class="muted center block">Demo didáctico. No es una compra real 🙂</small>
+    </div>
+  </aside>
+
+  <!-- MODAL LOGIN -->
+  <dialog id="loginModal" class="modal">
+    <div class="modal__card">
+      <header class="modal__header">
+        <h3>Ingresar</h3>
+        <button id="closeLogin" class="modal__close" aria-label="Cerrar">✕</button>
+      </header>
+
+      <form id="loginForm" class="modal__body" method="dialog">
+        <!-- ...campos... -->
+        <div class="modal__footer">
+          <button type="submit" class="btn-main btn-full">Ingresar</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+      <p class="muted small">
+        Usá una de las cuentas demo:
+        <br />cliente@electro.shop / 123456
+        <br />manager@electro.shop / admin123
+      </p>
+
+      <div class="field">
+        <label for="email">Correo</label>
+        <input id="email" type="email" autocomplete="username" required />
+      </div>
+
+      <div class="field">
+        <label for="password">Contraseña</label>
+        <input id="password" type="password" autocomplete="current-password" required />
+      </div>
+
+      <button type="submit" class="btn-main btn-full">Ingresar</button>
+    </form>
+  </dialog>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__content">
+      <p>© <span id="year"></span> ElectroShop · Proyecto didáctico</p>
+      <p class="muted">HTML · CSS · JavaScript · Roles · Carrito persistente</p>
+    </div>
+  </footer>
+
+  <script src="electroshop.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Dashboard · Métricas y Usuarios</title>
+  <link rel="stylesheet" href="/dashboard.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__content">
+      <div class="brand">
+        <span class="logo">📊</span>
+        <h1 class="brand__title">Admin Dashboard</h1>
+      </div>
+
+      <nav class="userbar">
+        <a class="link-nav" href="/index.html">Portfolio</a>
+        <a class="link-nav" href="/electroshop.html">ElectroShop</a>
+        <a class="link-nav" href="/burgerexpress.html">BurgerExpress</a>
+        <a class="link-nav" href="/gymplanner.html">GymPlanner</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container layout">
+    <section class="metrics-panel">
+      <header class="panel__header">
+        <h2>Métricas rápidas</h2>
+        <p class="muted">Visión general de actividad</p>
+      </header>
+
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="metric-label">Ventas hoy</span>
+          <strong class="metric-value" id="mVentasHoy">$0</strong>
+          <span class="metric-foot" id="mVentasDelta">+0% vs ayer</span>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-label">Usuarios activos</span>
+          <strong class="metric-value" id="mActivos">0</strong>
+          <span class="metric-foot muted">en las últimas 24h</span>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-label">Tickets abiertos</span>
+          <strong class="metric-value" id="mTickets">0</strong>
+          <span class="metric-foot muted">soporte pendiente</span>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <header class="chart-head">
+          <span>Ventas últimos 7 días</span>
+          <span class="muted" id="chartHint">Promedio diario</span>
+        </header>
+        <canvas id="salesChart" width="400" height="180"></canvas>
+      </div>
+    </section>
+
+    <section class="table-panel">
+      <header class="panel__header">
+        <h2>Usuarios</h2>
+        <p class="muted">Filtrá por rol o buscá por nombre</p>
+      </header>
+
+      <div class="filters">
+        <input id="filterText" class="filter-input" placeholder="Buscar nombre..." />
+        <select id="filterRole" class="filter-input">
+          <option value="">Todos los roles</option>
+          <option value="admin">admin</option>
+          <option value="manager">manager</option>
+          <option value="user">user</option>
+        </select>
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Rol</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody id="userTableBody">
+          <!-- filas dinámicas -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <p>© <span id="year"></span> Admin Dashboard · Proyecto didáctico</p>
+      <p class="muted">Métricas fake, UI real ✨</p>
+    </div>
+  </footer>
+
+  <!-- NOTA: estoy usando Chart.js desde CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/dashboard.js" type="module"></script>
+
+</body>
+</html>
