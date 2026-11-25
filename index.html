@@ -1,109 +1,455 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio de Ariel Cortés: proyectos de Python, Django y desarrollo de aplicaciones para análisis de datos.">
-  <title>Ariel Cortés | Python y desarrollo web</title>
-  <link rel="stylesheet" href="style.portfolio.css">
-</head>
-<body>
-  <a class="skip" href="#contenido">Ir al contenido</a>
-  <header class="site-header">
-    <a class="brand" href="#inicio" aria-label="Ariel Cortés, inicio">AC<span class="brand-dot">.</span></a>
-    <nav aria-label="Navegación principal">
-      <a href="#proyectos">Proyectos</a>
-      <a href="#perfil">Perfil</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
-
-  <main id="contenido">
-    <section class="hero wrap" id="inicio" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow">PORTFOLIO · PYTHON / WEB</p>
-        <h1 id="hero-title">Hola, soy <span>Ariel Cortés.</span><br>Construyo software que resuelve problemas concretos.</h1>
-        <p class="hero-lead">Desarrollo soluciones con Python para procesar datos, automatizar tareas y crear aplicaciones web. Me interesa convertir necesidades reales en herramientas claras y mantenibles.</p>
-        <div class="actions">
-          <a class="button primary" href="#proyectos">Ver proyectos</a>
-          <a class="button secondary" href="https://github.com/Ariel97-14" target="_blank" rel="noopener noreferrer">Mi GitHub</a>
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111a32" />
+    <meta
+      name="description"
+      content="Portfolio de Ariel Cortés: proyectos de Python, FastAPI, Django y procesamiento de datos, con código y pruebas para explorar."
+    />
+    <title>Ariel Cortés — Python, datos y desarrollo web</title>
+    <link rel="stylesheet" href="style.portfolio.css" />
+    <script src="portfolio.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Ir al contenido</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a
+          class="wordmark"
+          href="#inicio"
+          aria-label="Ariel Cortés, volver al inicio"
+          ><span class="wordmark-mark">ac<span>.</span></span
+          ><span class="wordmark-name">ARIEL<br />CORTÉS</span></a
+        >
+        <nav class="nav" aria-label="Navegación principal">
+          <a href="#proyectos">Proyectos</a>
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <a class="header-cta" href="mailto:cortesariel747@gmail.com"
+          >Escribime <span aria-hidden="true">↗</span></a
+        >
       </div>
-      <aside class="hero-note" aria-label="Áreas de trabajo">
-        <span class="note-label">EN QUÉ TRABAJO</span>
-        <div class="note-line"><span>01</span><strong>Python</strong><small>Lógica y automatización</small></div>
-        <div class="note-line"><span>02</span><strong>Backend</strong><small>Django · FastAPI</small></div>
-        <div class="note-line"><span>03</span><strong>Datos</strong><small>Procesamiento y análisis</small></div>
-      </aside>
-    </section>
+    </header>
 
-    <section class="section projects-section" id="proyectos" aria-labelledby="projects-title">
-      <div class="wrap">
-        <div class="section-heading">
-          <div><p class="eyebrow">TRABAJO SELECCIONADO</p><h2 id="projects-title">Proyectos</h2></div>
-          <p>Cada proyecto muestra el problema, la solución y lo que se puede revisar.</p>
-        </div>
-        <div class="project-grid">
-          <article class="project-card featured">
-            <div class="card-top"><span class="pill">Python · Django</span><span class="card-index">01 / PÚBLICO</span></div>
-            <h3>EcoTech Solutions</h3>
-            <p class="project-summary">Tres ejercicios de Python enfocados en limpieza de lecturas de sensores, inventario orientado a objetos y un panel Django para calcular emisiones.</p>
-            <ul>
-              <li>Validación de entradas y manejo explícito de errores.</li>
-              <li>Exportación JSON y pruebas con <code>unittest</code> y Django.</li>
-              <li>Instrucciones de ejecución documentadas en el repositorio.</li>
-            </ul>
-            <a class="text-link" href="https://github.com/Ariel97-14/Python-examen" target="_blank" rel="noopener noreferrer">Explorar el código <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="project-card">
-            <div class="card-top"><span class="pill">FastAPI · SQLAlchemy · Datos</span><span class="card-index">02 / CASO DE ESTUDIO</span></div>
-            <h3>Analítica para restaurante</h3>
-            <p class="project-summary">Aplicación local para consolidar ventas de dos canales, analizar pedidos y productos, y registrar inventario.</p>
-            <ul>
-              <li>API en Python con FastAPI, Pydantic y SQLAlchemy.</li>
-              <li>Importación con vista previa, deduplicación y conciliación.</li>
-              <li>Interfaz web para consultar métricas y calidad de datos.</li>
-            </ul>
-            <p class="availability">Repositorio privado. Puedo explicar la arquitectura y las decisiones técnicas en una entrevista.</p>
-          </article>
-          <article class="project-card compact">
-            <div class="card-top"><span class="pill">HTML · CSS · JavaScript</span><span class="card-index">03 / COMPLEMENTARIO</span></div>
-            <h3>Portfolio web anterior</h3>
-            <p class="project-summary">Cuatro miniaplicaciones frontend: tienda, pedidos, reservas y dashboard. Sirven para mostrar interfaces, formularios y estado en el navegador.</p>
-            <div class="demo-links" aria-label="Demos frontend">
-              <a class="text-link" href="https://Ariel97-14.github.io/electroshop.html" target="_blank" rel="noopener noreferrer">Tienda ↗</a>
-              <a class="text-link" href="https://Ariel97-14.github.io/burgerexpress.html" target="_blank" rel="noopener noreferrer">Pedidos ↗</a>
-              <a class="text-link" href="https://Ariel97-14.github.io/gymplanner.html" target="_blank" rel="noopener noreferrer">Reservas ↗</a>
-              <a class="text-link" href="https://Ariel97-14.github.io/dashboard.html" target="_blank" rel="noopener noreferrer">Dashboard ↗</a>
+    <main id="contenido">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="shell hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow">
+              <span class="eyebrow-line"></span> PORTFOLIO DE DESARROLLO · 2026
+            </p>
+            <h1 id="hero-title">
+              Ideas claras.<br /><em>Código que funciona.</em>
+            </h1>
+            <p class="hero-intro">
+              Soy <strong>Ariel Cortés</strong>. Desarrollo proyectos con
+              Python, backend y datos: desde una API de ventas con control de
+              stock hasta procesos que convierten archivos en información útil.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-light" href="#proyectos"
+                >Explorar proyectos <span aria-hidden="true">↘</span></a
+              >
+              <a
+                class="button button-outline"
+                href="https://github.com/Ariel97-14"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver GitHub <span aria-hidden="true">↗</span></a
+              >
             </div>
-          </article>
+            <div class="hero-meta">
+              <span>Python</span><span>FastAPI</span><span>SQLite</span
+              ><span>Django</span>
+            </div>
+          </div>
+          <div
+            class="hero-visual"
+            aria-label="Esquema de proyectos: datos, lógica y resultados"
+          >
+            <div class="visual-top">
+              <span class="visual-dots" aria-hidden="true"
+                ><i></i><i></i><i></i></span
+              ><span>trabajo.py</span><span>01 / 03</span>
+            </div>
+            <div class="visual-body">
+              <p class="visual-label">DE UNA IDEA A UNA HERRAMIENTA</p>
+              <div class="flow-row">
+                <span class="flow-icon">01</span>
+                <div>
+                  <strong>Datos de entrada</strong
+                  ><small>CSV · formularios · reglas</small>
+                </div>
+              </div>
+              <div class="flow-connector" aria-hidden="true"></div>
+              <div class="flow-row">
+                <span class="flow-icon active">02</span>
+                <div>
+                  <strong>Lógica en Python</strong
+                  ><small>validación · pruebas · API</small>
+                </div>
+              </div>
+              <div class="flow-connector" aria-hidden="true"></div>
+              <div class="flow-row">
+                <span class="flow-icon">03</span>
+                <div>
+                  <strong>Resultados útiles</strong
+                  ><small>consultas · reportes · decisiones</small>
+                </div>
+              </div>
+            </div>
+            <div class="visual-bottom">
+              <span class="status-pulse" aria-hidden="true"></span> Tres
+              repositorios públicos para revisar
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+        <div class="hero-gridline" aria-hidden="true"></div>
+      </section>
 
-    <section class="section about-section" id="perfil" aria-labelledby="about-title">
-      <div class="wrap about-grid">
-        <div><p class="eyebrow">SOBRE MÍ</p><h2 id="about-title">Del problema al producto.</h2></div>
-        <div class="about-copy">
-          <p>Mi trabajo combina lógica de negocio, datos e interfaces. En mis proyectos he desarrollado desde scripts con pruebas hasta una API y una aplicación web para una operación real.</p>
-          <p>Busco seguir creciendo en desarrollo Python y backend, con atención a la calidad del código, la documentación y la utilidad de cada solución.</p>
-          <div class="skills" aria-label="Tecnologías usadas en los proyectos"><span>Python</span><span>Django</span><span>FastAPI</span><span>SQLAlchemy</span><span>Git</span><span>JavaScript</span></div>
-        </div>
-      </div>
-    </section>
+      <section
+        class="projects section"
+        id="proyectos"
+        aria-labelledby="projects-title"
+      >
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">TRABAJO SELECCIONADO</p>
+              <h2 id="projects-title">Proyectos para <span>explorar.</span></h2>
+            </div>
+            <p>
+              Problemas diferentes, soluciones concretas. En los repositorios
+              públicos podés revisar el código, las pruebas y cómo ejecutarlos.
+            </p>
+          </div>
+          <div class="project-toolbar">
+            <p class="project-count" id="project-count" aria-live="polite">
+              5 proyectos
+            </p>
+            <div class="filters" role="group" aria-label="Filtrar proyectos">
+              <button
+                type="button"
+                class="filter active"
+                data-filter="all"
+                aria-pressed="true"
+              >
+                Todos
+              </button>
+              <button
+                type="button"
+                class="filter"
+                data-filter="python"
+                aria-pressed="false"
+              >
+                Python
+              </button>
+              <button
+                type="button"
+                class="filter"
+                data-filter="data"
+                aria-pressed="false"
+              >
+                Datos
+              </button>
+              <button
+                type="button"
+                class="filter"
+                data-filter="web"
+                aria-pressed="false"
+              >
+                Web
+              </button>
+            </div>
+          </div>
 
-    <section class="contact-section" id="contacto" aria-labelledby="contact-title">
-      <div class="wrap contact-grid">
-        <div><p class="eyebrow">CONTACTO</p><h2 id="contact-title">Hablemos de tu proyecto o vacante.</h2></div>
-        <div class="contact-links">
-          <a href="mailto:cortesariel747@gmail.com">cortesariel747@gmail.com <span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/Ariel97-14" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-          <a href="https://www.linkedin.com/in/ariel-cortes97/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          <div class="project-list" id="project-list">
+            <article
+              class="project project-spotlight"
+              data-categories="python web"
+            >
+              <div class="project-main">
+                <div class="project-topline">
+                  <span class="project-number">01 / PROYECTO PÚBLICO</span
+                  ><span class="project-tag">API · BACKEND</span>
+                </div>
+                <h3>Tienda Demo API</h3>
+                <p>
+                  Una tienda ficticia necesita registrar productos y pedidos sin
+                  vender más unidades que las disponibles. Construí una API con
+                  persistencia en SQLite, control de stock y reportes de ventas.
+                </p>
+                <ul class="project-points">
+                  <li>Pedidos atómicos</li>
+                  <li>Validación de entradas</li>
+                  <li>Pruebas de integración</li>
+                </ul>
+                <div class="project-footer">
+                  <span class="tech-line"
+                    >FastAPI <b>·</b> SQLite <b>·</b> Pytest</span
+                  ><a
+                    class="project-link"
+                    href="https://github.com/Ariel97-14/tienda-demo-api"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Ver repositorio <span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+              <div class="project-art art-api" aria-hidden="true">
+                <div class="art-window">
+                  <div class="art-bar">
+                    <i></i><i></i><i></i><span>API / PEDIDOS</span>
+                  </div>
+                  <div class="art-content">
+                    <div class="art-code"><span>POST</span> /orders</div>
+                    <div class="art-separator"></div>
+                    <div class="art-pair">
+                      <span>stock</span><strong>verificado</strong>
+                    </div>
+                    <div class="art-pair">
+                      <span>pedido</span><strong>registrado</strong>
+                    </div>
+                    <div class="art-result">201 · Created</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="project project-split"
+              data-categories="python data"
+            >
+              <div class="project-main">
+                <div class="project-topline">
+                  <span class="project-number">02 / PROYECTO PÚBLICO</span
+                  ><span class="project-tag">DATOS · AUTOMATIZACIÓN</span>
+                </div>
+                <h3>Movilidad Urbana ETL</h3>
+                <p>
+                  Un flujo de consola transforma viajes ficticios en métricas.
+                  Importa CSV, valida fechas y registros, evita duplicados y
+                  guarda los datos en SQLite para generar reportes JSON.
+                </p>
+                <ul class="project-points">
+                  <li>Importación repetible</li>
+                  <li>Fechas con zona horaria</li>
+                  <li>Pruebas automatizadas</li>
+                </ul>
+                <div class="project-footer">
+                  <span class="tech-line"
+                    >Python <b>·</b> CSV <b>·</b> SQLite</span
+                  ><a
+                    class="project-link"
+                    href="https://github.com/Ariel97-14/movilidad-urbana-etl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Ver repositorio <span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+              <div class="project-art art-data" aria-hidden="true">
+                <div class="data-caption">CSV → SQLITE → JSON</div>
+                <div class="data-bars">
+                  <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                </div>
+                <div class="data-summary">
+                  <span>viajes por mes</span><strong>01 — 03</strong>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="project project-compact"
+              data-categories="python web"
+            >
+              <div class="project-main">
+                <div class="project-topline">
+                  <span class="project-number">03 / PROYECTO PÚBLICO</span
+                  ><span class="project-tag">APRENDIZAJE · DJANGO</span>
+                </div>
+                <h3>EcoTech Solutions</h3>
+                <p>
+                  Tres ejercicios de Python: normalización de lecturas de
+                  sensores, inventario orientado a objetos y un panel Django
+                  para calcular emisiones. Incluye validaciones y pruebas.
+                </p>
+                <div class="project-footer">
+                  <span class="tech-line"
+                    >Python <b>·</b> Django <b>·</b> unittest</span
+                  ><a
+                    class="project-link"
+                    href="https://github.com/Ariel97-14/Python-examen"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Ver repositorio <span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="project project-compact"
+              data-categories="python data web"
+            >
+              <div class="project-main">
+                <div class="project-topline">
+                  <span class="project-number">04 / CASO DE ESTUDIO</span
+                  ><span class="project-tag">APLICACIÓN LOCAL</span>
+                </div>
+                <h3>Analítica para restaurante</h3>
+                <p>
+                  Aplicación local que consolida ventas de dos canales y permite
+                  consultar pedidos, productos e inventario. El proyecto incluye
+                  una API Python y una interfaz web.
+                </p>
+                <div class="project-footer">
+                  <span class="tech-line"
+                    >FastAPI <b>·</b> SQLAlchemy <b>·</b> Next.js</span
+                  ><span class="private-note"
+                    >Repositorio privado · arquitectura explicable en
+                    entrevista</span
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project project-compact" data-categories="web">
+              <div class="project-main">
+                <div class="project-topline">
+                  <span class="project-number"
+                    >05 / PROYECTOS COMPLEMENTARIOS</span
+                  ><span class="project-tag">FRONTEND</span>
+                </div>
+                <h3>Mini apps web</h3>
+                <p>
+                  Cuatro interfaces con HTML, CSS y JavaScript: tienda, pedidos,
+                  reservas de clases y panel administrativo. Muestran
+                  formularios, estado en el navegador e interacción.
+                </p>
+                <div class="project-footer">
+                  <span class="tech-line"
+                    >HTML <b>·</b> CSS <b>·</b> JavaScript</span
+                  ><a class="project-link" href="#demos"
+                    >Ver demos <span aria-hidden="true">↘</span></a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
+      </section>
+
+      <section class="demos section" id="demos" aria-labelledby="demos-title">
+        <div class="shell demos-layout">
+          <div>
+            <p class="section-kicker">TAMBIÉN EN LA WEB</p>
+            <h2 id="demos-title">
+              Interfaces que<br /><span>se pueden probar.</span>
+            </h2>
+            <p>
+              Proyectos frontend anteriores que complementan mi trabajo con
+              Python.
+            </p>
+          </div>
+          <div class="demo-list">
+            <a href="electroshop.html"
+              ><span>01</span><strong>ElectroShop</strong
+              ><small>Catálogo y carrito</small><b aria-hidden="true">↗</b></a
+            ><a href="burgerexpress.html"
+              ><span>02</span><strong>BurgerExpress</strong
+              ><small>Pedidos online</small><b aria-hidden="true">↗</b></a
+            ><a href="gymplanner.html"
+              ><span>03</span><strong>GymPlanner</strong
+              ><small>Reservas de clases</small><b aria-hidden="true">↗</b></a
+            ><a href="dashboard.html"
+              ><span>04</span><strong>Admin Dashboard</strong
+              ><small>Métricas y filtros</small><b aria-hidden="true">↗</b></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="about section"
+        id="sobre-mi"
+        aria-labelledby="about-title"
+      >
+        <div class="shell about-layout">
+          <div>
+            <p class="section-kicker">SOBRE MÍ</p>
+            <h2 id="about-title">
+              Me interesa lo que pasa
+              <span>después de ejecutar el código.</span>
+            </h2>
+          </div>
+          <div class="about-body">
+            <p>
+              Disfruto trabajar donde se cruzan las reglas de negocio, los datos
+              y las personas que van a usar la herramienta. En mis proyectos
+              practico cómo validar entradas, escribir pruebas y explicar las
+              decisiones de implementación.
+            </p>
+            <p>
+              Busco seguir creciendo en desarrollo Python y backend,
+              construyendo soluciones que sean útiles y fáciles de entender.
+            </p>
+            <div
+              class="skill-list"
+              aria-label="Tecnologías presentes en mis proyectos"
+            >
+              <span>Python</span><span>FastAPI</span><span>Django</span
+              ><span>SQLite</span><span>SQLAlchemy</span><span>Git</span
+              ><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="contact section"
+        id="contacto"
+        aria-labelledby="contact-title"
+      >
+        <div class="shell contact-layout">
+          <div>
+            <p class="section-kicker">SIGUIENTE PASO</p>
+            <h2 id="contact-title">
+              ¿Hablamos de<br /><span>un proyecto?</span>
+            </h2>
+            <p>
+              Si querés conocer cómo construí alguno de estos trabajos o tenés
+              una oportunidad para conversar, escribime.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="contact-email" href="mailto:cortesariel747@gmail.com"
+              >cortesariel747@gmail.com <span aria-hidden="true">↗</span></a
+            ><a
+              href="https://github.com/Ariel97-14"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub <span aria-hidden="true">↗</span></a
+            ><a
+              href="https://www.linkedin.com/in/ariel-cortes97/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <span>© 2026 Ariel Cortés</span
+        ><span>Diseñado y desarrollado con HTML, CSS y JavaScript.</span
+        ><a href="#inicio">Volver arriba ↑</a>
       </div>
-    </section>
-  </main>
-  <footer class="site-footer wrap"><span>© 2026 Ariel Cortés</span><span>Hecho con HTML y CSS</span></footer>
-</body>
+    </footer>
+  </body>
 </html>
 
