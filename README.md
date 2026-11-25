@@ -1,71 +1,18 @@
-# 🌐 Portfolio — Ariel Cortés
+# Portfolio — Ariel Cortés
 
-Bienvenido/a a mi portfolio web como Desarrollador Frontend.  
-Aquí presento 4 proyectos desarrollados con **HTML, CSS y JavaScript**, orientados a escenarios reales.
+Portfolio orientado a Python, backend y aplicaciones web. Sitio público: [Ariel97-14.github.io](https://Ariel97-14.github.io).
 
----
+## Proyectos destacados
 
-## 🚀 Deploy
-🔗 https://Ariel97-14.github.io
+- [EcoTech Solutions](https://github.com/Ariel97-14/Python-examen): ejercicios de Python, inventario y panel Django, con pruebas e instrucciones de ejecución.
+- Analítica para restaurante: aplicación local con FastAPI y procesamiento de datos. El repositorio es privado; la web muestra una descripción general sin datos internos.
+- Demos frontend: [tienda](https://Ariel97-14.github.io/electroshop.html), [pedidos](https://Ariel97-14.github.io/burgerexpress.html), [reservas](https://Ariel97-14.github.io/gymplanner.html) y [dashboard](https://Ariel97-14.github.io/dashboard.html).
 
----
+## Contacto
 
-## 🧩 Proyectos
+cortesariel747@gmail.com · [GitHub](https://github.com/Ariel97-14) · [LinkedIn](https://www.linkedin.com/in/ariel-cortes97/)
 
-### 1) ElectroShop
-E-commerce funcional con:
-- Catálogo dinámico
-- Carrito
-- Login simulado
-- Ficha técnica por producto
-- Búsqueda + filtrado
+La portada está hecha con HTML y CSS. Para verla localmente, abrí `index.html`; no requiere instalar dependencias.
 
-👉 `/electroshop.html`
-
----
-
-### 2) BurgerExpress
-Menú digital con:
-- UI cálida
-- Animaciones
-- Sistema simple de compra
-
-👉 `/burgerexpress.html`
-
----
-
-### 3) GymPlanner
-App para reservas de turnos:
-- Reservar / Cancelar
-- Persistencia local
-- Cupos por clase
-
-👉 `/gymplanner.html`
-
----
-
-### 4) Admin Dashboard
-Panel estilo SaaS:
-- Métricas
-- Gráficos (Chart.js)
-- Filtros dinámicos
-
-👉 `/dashboard.html`
-
----
-
-## 🛠️ Tecnologías
-- HTML5
-- CSS3
-- JavaScript
-- Chart.js
-- LocalStorage
-- GitHub Pages
-
----
-
-## 📞 Contacto +5492617111724
-👤 **Ariel Cortés**  
-🔗 LinkedIn:https://www.linkedin.com/in/ariel-cortes97/
-📧 Email: cortesarieln@gmail.com
+`cv-borrador.md` es un borrador local pendiente de completar con formación y experiencia verificadas antes de exportarlo o enviarlo.
 
